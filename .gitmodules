@@ -1,0 +1,3 @@
+[submodule "vendor/Engine"]
+	path = vendor/Engine
+	url = https://github.com/Procius-Gaming/2dEngine.git
