@@ -8,9 +8,10 @@ project(CardGame)
 
 set (HEADER_FILES
    include/enpch.h)
-file(GLOB SOURCES src/*.cpp vendor/stb_image/stb_image.cpp vendor/Engine/src/*.cpp vendor/imgui/*.cpp
+file(GLOB SOURCES src/*.cpp 
+#vendor/stb_image/stb_image.cpp vendor/Engine/src/*.cpp vendor/imgui/*.cpp
 				
-		${HEADER_FILES} 
+		#${HEADER_FILES} 
 		)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -20,10 +21,11 @@ set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAK
 
 #add_compile_definitions(UNICODE)
 
-add_subdirectory(vendor/glad)
-add_subdirectory(vendor/glfw)
-add_subdirectory(vendor/spdlog)
-add_subdirectory(vendor/glm)
+#add_subdirectory(vendor/glad)
+#add_subdirectory(vendor/glfw)
+#add_subdirectory(vendor/spdlog)
+#add_subdirectory(vendor/glm)
+add_subdirectory(vendor/Engine)
 
 #add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD 
 #  COMMAND "${CMAKE_COMMAND}" -E copy 
@@ -41,14 +43,13 @@ target_include_directories(${PROJECT_NAME}
 	PUBLIC include
 	PUBLIC vendor/Engine/include
 	PUBLIC vendor/Engine/include/Core
-	PUBLIC include/Game
-	PUBLIC vendor/stb_image
-	PUBLIC vendor/glad/include
+	#PUBLIC vendor/stb_image
+	#PUBLIC vendor/Engine/vendor/glad/include
 	#PUBLIC vendor/glad/src
-	PUBLIC vendor/glfw/include
-	PUBLIC vendor/spdlog/include
-	PUBLIC vendor/imgui
-	PUBLIC vendor/glm/glm
+	#PUBLIC vendor/glfw/include
+	#PUBLIC vendor/Engine/vendor/spdlog/include
+	#PUBLIC vendor/imgui
+	#PUBLIC vendor/glm/glm
 	#PUBLIC vendor/assimp/include
 	)
 
@@ -59,10 +60,11 @@ target_include_directories(${PROJECT_NAME}
 	#	)
 
 target_link_libraries(${PROJECT_NAME}
-		glad
-	${OPENGL_LIBRARIES}
-	glfw
+	#glad
+	#${OPENGL_LIBRARIES}
+	#glfw
 	#imgui
-	glm
+	#glm
   #assimp
+	Engine
 	)

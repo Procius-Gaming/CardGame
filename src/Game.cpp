@@ -2,7 +2,7 @@
 
 Game::Game()
 {
-
+    app.GetWindow().SetName("CardGame");
 }
 
 Game::~Game()
