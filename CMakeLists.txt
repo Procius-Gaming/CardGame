@@ -7,8 +7,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(CardGame)
 
 set (HEADER_FILES
-   vendor/Engine/include/core/enpch.h)
-file(GLOB SOURCES src/Game/*.cpp vendor/stb_image/stb_image.cpp vendor/Engine/src/*.cpp vendor/imgui/*.cpp
+   include/enpch.h)
+file(GLOB SOURCES src/*.cpp vendor/stb_image/stb_image.cpp vendor/Engine/src/*.cpp vendor/imgui/*.cpp
+				
 		${HEADER_FILES} 
 		)
 
@@ -38,8 +39,9 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 
 target_include_directories(${PROJECT_NAME}
 	PUBLIC include
-	PUBLIC vendor/Engine/include/
+	PUBLIC vendor/Engine/include
 	PUBLIC vendor/Engine/include/Core
+	PUBLIC include/Game
 	PUBLIC vendor/stb_image
 	PUBLIC vendor/glad/include
 	#PUBLIC vendor/glad/src
