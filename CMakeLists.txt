@@ -8,8 +8,8 @@ file(GLOB SOURCES src/*.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-add_subdirectory(vendor/GLFW GLFW)
-add_subdirectory(vendor/GLAD GLAD)
+add_subdirectory(Vendor/GLFW GLFW)
+add_subdirectory(Vendor/GLAD GLAD)
 
 add_custom_command(
     TARGET ${PROJECT_NAME} POST_BUILD 
@@ -27,12 +27,12 @@ add_custom_command(
 
 target_include_directories(${PROJECT_NAME} 
 	PUBLIC include	
-	PUBLIC vendor/GLFW/include
-	PUBLIC vendor/GLAD/include
+	PUBLIC Vendor/GLFW/include
+	PUBLIC Vendor/GLAD/include
 )
 
 target_link_libraries(${PROJECT_NAME}
-	opengl32
+  #opengl32
 	glfw
 	glad
 )

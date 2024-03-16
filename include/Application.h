@@ -1,30 +1,33 @@
 #pragma once
 #include "Window.h"
-#include "Renderer/Shader.h"
-#include "Renderer/Texture.h"
-#include "Renderer/VertexArray.h"
-#include "Renderer/Renderer.h"
+#include <vector>
 
-class Application
-{
+class Application {
 public:
-	Application();
-	~Application();
+  Application();
+  ~Application();
 
-	void Run();
+  enum AppState { EGameplay, EPaused, EQuit };
 
-	void Finished();
-	
-	unsigned int VBO, VAO, EBO, texture;
+  AppState GetState() const { return mAppState; }
+  void SetState(AppState state) { mAppState = state; }
 
-	Window* GetWindow() { return mWindow; }
-	
+  void Run();
+
+  void Finished();
+
+  Window *GetWindow() { return mWindow; }
+
 private:
-	Window* mWindow;
-	Renderer* mRenderer;
-	Shader* mShader;
-	Texture* mTexture;
-	VertexArray* mVertexArray;
-	int mWidth, mHeight;
-	std::string mTitle;
+  void UpdateApp();
+  void Render();
+  // All entity in the Application
+
+  // Any pending Entity
+
+  Window *mWindow;
+  // Track if we're updationg entities right now
+  AppState mAppState;
+  int mWidth, mHeight;
+  std::string mTitle;
 };

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/Playground/CardGame/Vendor/GLAD/src/glad.c" "GLAD/CMakeFiles/glad.dir/src/glad.c.obj" "gcc" "GLAD/CMakeFiles/glad.dir/src/glad.c.obj.d"
+  "/home/Nesmy/Playground/CardGame/Vendor/GLAD/src/glad.c" "GLAD/CMakeFiles/glad.dir/src/glad.c.o" "gcc" "GLAD/CMakeFiles/glad.dir/src/glad.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -3,22 +3,23 @@
 
 struct GLFWwindow;
 
-class Window
-{
+class Window {
 public:
-	Window(std::string title, int width, int height);
-	~Window();
+  Window(std::string title, int width, int height);
+  ~Window();
 
-	bool Init();
+  bool Init();
 
-	bool Close();
+  bool Close();
 
-	void Finished();
+  void Finished();
 
-	GLFWwindow *GetGLFWwindow() { return mWindow; }
+  GLFWwindow *GetGLFWwindow() { return mWindow; }
+  int GetWidth() const { return mWidth; }
+  int GetHeight() const { return mHeight; }
 
 private:
-	GLFWwindow* mWindow;
-	int mWidth, mHeight;
-	std::string mTitle;
+  GLFWwindow *mWindow;
+  int mWidth, mHeight;
+  std::string mTitle;
 };

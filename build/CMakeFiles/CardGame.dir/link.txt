@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/CardGame.dir/src/Application.cpp.o CMakeFiles/CardGame.dir/src/Math.cpp.o CMakeFiles/CardGame.dir/src/Window.cpp.o CMakeFiles/CardGame.dir/src/main.cpp.o CMakeFiles/CardGame.dir/src/stb_image.cpp.o -o CardGame  GLFW/src/libglfw3.a GLAD/libglad.a -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -ldl 

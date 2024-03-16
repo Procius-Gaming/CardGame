@@ -1,42 +1,36 @@
 #include "Application.h"
-#include "glad/glad.h"
-#include "GLFW/glfw3.h"
 #include "Renderer/stb_image.h"
+#include "glad/glad.h"
+#include <algorithm>
 #include <iostream>
 
-Application::Application()
-{
-	mTitle = "CardGame";
-	mWidth = 640;
-	mHeight = 480;
+#include "GLFW/glfw3.h"
 
-	mWindow = new Window(mTitle, mWidth, mHeight);
-	mRenderer = new Renderer(this);
-	if (!mRenderer->Init())
-	{
-		std::cout << "Failed to init rendere\n";
+Application::Application() {
+  mTitle = "CardGame";
+  mWidth = 640;
+  mHeight = 480;
 
-	}
-
+  mWindow = new Window(mTitle, mWidth, mHeight);
+  if (!mWindow->Init()) {
+    std::cout << "Faile to init window\n";
+  }
 }
 
-Application::~Application()
-{
-	Finished();
+Application::~Application() { Finished(); }
+
+void Application::Run() {
+  while (!mWindow->Close()) {
+    UpdateApp();
+    Render();
+  }
 }
 
-void Application::Run()
-{
-	while (!mWindow->Close())
-	{
-		mRenderer->Draw();
-		// Poll Events
-		glfwPollEvents();
-	}
+void Application::UpdateApp() { float deltaTime; }
+
+void Application::Render() {
+  // Poll Events
+  glfwPollEvents();
 }
 
-
-void Application::Finished()
-{
-	mWindow->Finished();
-}
+void Application::Finished() { mWindow->Finished(); }
