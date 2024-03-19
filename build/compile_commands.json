@@ -7,9 +7,45 @@
 },
 {
   "directory": "/home/Nesmy/Playground/CardGame/build",
+  "command": "/usr/bin/c++  -I/home/Nesmy/Playground/CardGame/include -I/home/Nesmy/Playground/CardGame/Vendor/GLFW/include -I/home/Nesmy/Playground/CardGame/Vendor/GLAD/include -std=gnu++17 -o CMakeFiles/CardGame.dir/src/Entity.cpp.o -c /home/Nesmy/Playground/CardGame/src/Entity.cpp",
+  "file": "/home/Nesmy/Playground/CardGame/src/Entity.cpp",
+  "output": "CMakeFiles/CardGame.dir/src/Entity.cpp.o"
+},
+{
+  "directory": "/home/Nesmy/Playground/CardGame/build",
   "command": "/usr/bin/c++  -I/home/Nesmy/Playground/CardGame/include -I/home/Nesmy/Playground/CardGame/Vendor/GLFW/include -I/home/Nesmy/Playground/CardGame/Vendor/GLAD/include -std=gnu++17 -o CMakeFiles/CardGame.dir/src/Math.cpp.o -c /home/Nesmy/Playground/CardGame/src/Math.cpp",
   "file": "/home/Nesmy/Playground/CardGame/src/Math.cpp",
   "output": "CMakeFiles/CardGame.dir/src/Math.cpp.o"
+},
+{
+  "directory": "/home/Nesmy/Playground/CardGame/build",
+  "command": "/usr/bin/c++  -I/home/Nesmy/Playground/CardGame/include -I/home/Nesmy/Playground/CardGame/Vendor/GLFW/include -I/home/Nesmy/Playground/CardGame/Vendor/GLAD/include -std=gnu++17 -o CMakeFiles/CardGame.dir/src/Renderer.cpp.o -c /home/Nesmy/Playground/CardGame/src/Renderer.cpp",
+  "file": "/home/Nesmy/Playground/CardGame/src/Renderer.cpp",
+  "output": "CMakeFiles/CardGame.dir/src/Renderer.cpp.o"
+},
+{
+  "directory": "/home/Nesmy/Playground/CardGame/build",
+  "command": "/usr/bin/c++  -I/home/Nesmy/Playground/CardGame/include -I/home/Nesmy/Playground/CardGame/Vendor/GLFW/include -I/home/Nesmy/Playground/CardGame/Vendor/GLAD/include -std=gnu++17 -o CMakeFiles/CardGame.dir/src/Shader.cpp.o -c /home/Nesmy/Playground/CardGame/src/Shader.cpp",
+  "file": "/home/Nesmy/Playground/CardGame/src/Shader.cpp",
+  "output": "CMakeFiles/CardGame.dir/src/Shader.cpp.o"
+},
+{
+  "directory": "/home/Nesmy/Playground/CardGame/build",
+  "command": "/usr/bin/c++  -I/home/Nesmy/Playground/CardGame/include -I/home/Nesmy/Playground/CardGame/Vendor/GLFW/include -I/home/Nesmy/Playground/CardGame/Vendor/GLAD/include -std=gnu++17 -o CMakeFiles/CardGame.dir/src/Sprite.cpp.o -c /home/Nesmy/Playground/CardGame/src/Sprite.cpp",
+  "file": "/home/Nesmy/Playground/CardGame/src/Sprite.cpp",
+  "output": "CMakeFiles/CardGame.dir/src/Sprite.cpp.o"
+},
+{
+  "directory": "/home/Nesmy/Playground/CardGame/build",
+  "command": "/usr/bin/c++  -I/home/Nesmy/Playground/CardGame/include -I/home/Nesmy/Playground/CardGame/Vendor/GLFW/include -I/home/Nesmy/Playground/CardGame/Vendor/GLAD/include -std=gnu++17 -o CMakeFiles/CardGame.dir/src/Texture.cpp.o -c /home/Nesmy/Playground/CardGame/src/Texture.cpp",
+  "file": "/home/Nesmy/Playground/CardGame/src/Texture.cpp",
+  "output": "CMakeFiles/CardGame.dir/src/Texture.cpp.o"
+},
+{
+  "directory": "/home/Nesmy/Playground/CardGame/build",
+  "command": "/usr/bin/c++  -I/home/Nesmy/Playground/CardGame/include -I/home/Nesmy/Playground/CardGame/Vendor/GLFW/include -I/home/Nesmy/Playground/CardGame/Vendor/GLAD/include -std=gnu++17 -o CMakeFiles/CardGame.dir/src/VertexArray.cpp.o -c /home/Nesmy/Playground/CardGame/src/VertexArray.cpp",
+  "file": "/home/Nesmy/Playground/CardGame/src/VertexArray.cpp",
+  "output": "CMakeFiles/CardGame.dir/src/VertexArray.cpp.o"
 },
 {
   "directory": "/home/Nesmy/Playground/CardGame/build",

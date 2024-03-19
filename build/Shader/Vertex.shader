@@ -1,19 +1,25 @@
-#version 330 core
+// Request GLSL 3.3
+#version 330
 
+// Uniforms for world transform and view-proj
 uniform mat4 uWorldTransform;
 uniform mat4 uViewProj;
 
-layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aColor;
-layout (location = 2) in vec2 aTexCoord;
+// Attribute 0 is position, 1 is normal, 2 is tex coords.
+layout(location = 0) in vec3 inPosition;
+layout(location = 1) in vec3 inNormal;
+layout(location = 2) in vec2 inTexCoord;
 
-out vec3 ourColor;
-out vec2 TexCoord;
+// Any vertex outputs (other than position)
+out vec2 fragTexCoord;
 
 void main()
 {
-  vec4 pos = vec4(aPos, 1.0);
-	gl_Position = pos * uViewProj; 
-	ourColor = aColor;
-	TexCoord = vec2(aTexCoord.x, aTexCoord.y);
+	// Convert position to homogeneous coordinates
+	vec4 pos = vec4(inPosition, 1.0);
+	// Transform to position world space, then clip space
+	gl_Position = pos * uWorldTransform * uViewProj;
+
+	// Pass along the texture coordinate to frag shader
+	fragTexCoord = inTexCoord;
 }
