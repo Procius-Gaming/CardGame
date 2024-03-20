@@ -9,7 +9,7 @@ public:
   ~Window();
 
   bool Init();
-
+  
   bool Close();
 
   void Finished();
@@ -23,3 +23,5 @@ private:
   int mWidth, mHeight;
   std::string mTitle;
 };
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);

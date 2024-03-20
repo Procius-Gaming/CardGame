@@ -1,6 +1,7 @@
 #include "Application.h"
 #include "Entity/Entity.h"
 #include "Entity/Sprite.h"
+#include "Renderer/Texture.h"
 #include "Renderer/Renderer.h"
 #include "Renderer/stb_image.h"
 #include "glad/glad.h"
@@ -11,8 +12,8 @@
 
 Application::Application() {
   mTitle = "CardGame";
-  mWidth = 640;
-  mHeight = 480;
+  mWidth = 428;
+  mHeight = 926;
   mUpdatingEntities = false;
 
   mWindow = new Window(mTitle, mWidth, mHeight);
@@ -27,14 +28,19 @@ Application::Application() {
 
   mTestEnt = new Entity(this);
   mTestSp = new Sprite(mTestEnt);
-  mTestSp->SetTexture(GetRenderer()->GetTexture("Assets/container.jpg"));
+  mTestTex = GetRenderer()->GetTexture("Assets/container.jpg");
+  mTestSp->SetTexture(mTestTex);
   mTestEnt->SetPosition(Vector2(100, 100));
+  std::cout << "Box X: " << mTestSp->GetTexWidth() << " Y: " << mTestSp->GetTexHeight() << std::endl;
 
   mTestEnt = new Entity(this);
   mTestSp = new Sprite(mTestEnt);
-  mTestSp->SetTexture(
-      GetRenderer()->GetTexture("Assets/game-cards/card-back.jpg"));
+  mTestTex = GetRenderer()->GetTexture("Assets/game-cards/card-back.jpg");
+  mTestTex->SetWidth(100);
+  mTestTex->SetHeight(100);
+  mTestSp->SetTexture(mTestTex);
   mTestEnt->SetPosition(Vector2(100, 100));
+  std::cout << "Box X: " << mTestSp->GetTexWidth() << " Y: " << mTestSp->GetTexHeight() << std::endl;
 }
 
 Application::~Application() { Finished(); }

@@ -13,6 +13,8 @@ public:
 
   int GetWidth() const { return mWidth; }
   int GetHeight() const { return mHeight; }
+  void SetWidth(int width) { mWidth = width; }
+  void SetHeight(int height) { mHeight = height; }
   unsigned int GetTextureID() const { return mTextureID; }
 
   const std::string &GetFileName() const { return mFileName; }

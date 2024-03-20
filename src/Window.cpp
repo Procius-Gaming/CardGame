@@ -32,15 +32,21 @@ bool Window::Init() {
   }
 
   glfwMakeContextCurrent(mWindow);
+  glfwSetFramebufferSizeCallback(mWindow, framebuffer_size_callback);
 
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
     std::cout << "Failed to initialize GLAD" << std::endl;
     return false;
   }
 
-  glViewport(0, 0, mWidth, mHeight);
+  //glViewport(0, 0, mWidth, mHeight);
 
   return true;
 }
 
 void Window::Finished() { glfwTerminate(); }
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}

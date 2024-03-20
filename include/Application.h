@@ -41,4 +41,5 @@ private:
 
   class Entity *mTestEnt;
   class Sprite *mTestSp;
+  class Texture* mTestTex;
 };

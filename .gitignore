@@ -4,6 +4,9 @@
 .vs/
 .vs
 
+build/
+build
+
 # Compiled Object files
 *.slo
 *.lo
