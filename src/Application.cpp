@@ -1,7 +1,5 @@
 #include "Application.h"
-#include "Entity/Entity.h"
-#include "Entity/Sprite.h"
-#include "Renderer/Texture.h"
+#include "Entity/Deck.h"
 #include "Renderer/Renderer.h"
 #include "Renderer/stb_image.h"
 #include "glad/glad.h"
@@ -25,25 +23,16 @@ Application::Application() {
   if (!mRenderer->Initialize()) {
     std::cout << "Failed to init Renderer\n";
   }
-
-  mTestEnt = new Entity(this);
-  mTestSp = new Sprite(mTestEnt);
-  mTestTex = GetRenderer()->GetTexture("Assets/container.jpg");
-  mTestSp->SetTexture(mTestTex);
-  mTestEnt->SetPosition(Vector2(100, 100));
-  std::cout << "Box X: " << mTestSp->GetTexWidth() << " Y: " << mTestSp->GetTexHeight() << std::endl;
-
-  mTestEnt = new Entity(this);
-  mTestSp = new Sprite(mTestEnt);
-  mTestTex = GetRenderer()->GetTexture("Assets/game-cards/card-back.jpg");
-  mTestTex->SetWidth(100);
-  mTestTex->SetHeight(100);
-  mTestSp->SetTexture(mTestTex);
-  mTestEnt->SetPosition(Vector2(100, 100));
-  std::cout << "Box X: " << mTestSp->GetTexWidth() << " Y: " << mTestSp->GetTexHeight() << std::endl;
+    
+  LoadData();
 }
 
 Application::~Application() { Finished(); }
+
+void Application::LoadData()
+{
+    mTestDeck = new Deck(this,0,0);
+}
 
 void Application::Run() {
   while (!mWindow->Close()) {

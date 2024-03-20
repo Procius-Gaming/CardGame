@@ -27,6 +27,7 @@ public:
 private:
   void UpdateApp();
   void Render();
+  void LoadData();
 
   std::vector<class Entity *> mEntities;
   std::vector<class Entity *> mPendingEntities;
@@ -39,7 +40,5 @@ private:
   std::string mTitle;
   bool mUpdatingEntities;
 
-  class Entity *mTestEnt;
-  class Sprite *mTestSp;
-  class Texture* mTestTex;
+  class Deck* mTestDeck;
 };

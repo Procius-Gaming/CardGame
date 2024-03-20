@@ -250,6 +250,30 @@ src/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CardGame.dir/build.make CMakeFiles/CardGame.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
 
+src/Deck.obj: src/Deck.cpp.obj
+.PHONY : src/Deck.obj
+
+# target to build an object file
+src/Deck.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CardGame.dir/build.make CMakeFiles/CardGame.dir/src/Deck.cpp.obj
+.PHONY : src/Deck.cpp.obj
+
+src/Deck.i: src/Deck.cpp.i
+.PHONY : src/Deck.i
+
+# target to preprocess a source file
+src/Deck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CardGame.dir/build.make CMakeFiles/CardGame.dir/src/Deck.cpp.i
+.PHONY : src/Deck.cpp.i
+
+src/Deck.s: src/Deck.cpp.s
+.PHONY : src/Deck.s
+
+# target to generate assembly for a file
+src/Deck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CardGame.dir/build.make CMakeFiles/CardGame.dir/src/Deck.cpp.s
+.PHONY : src/Deck.cpp.s
+
 src/Entity.obj: src/Entity.cpp.obj
 .PHONY : src/Entity.obj
 
@@ -510,6 +534,9 @@ help:
 	@echo "... src/Application.obj"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
+	@echo "... src/Deck.obj"
+	@echo "... src/Deck.i"
+	@echo "... src/Deck.s"
 	@echo "... src/Entity.obj"
 	@echo "... src/Entity.i"
 	@echo "... src/Entity.s"

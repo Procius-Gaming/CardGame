@@ -45,7 +45,7 @@ void Renderer::UnloadData() {
 
 void Renderer::Draw() {
   // Clear color buffer/depth buffer
-  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+  glClearColor(0.0f, 0.5f, 0.0f, 1.0f);
   glDepthMask(GL_TRUE);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
